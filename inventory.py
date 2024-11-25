@@ -1,23 +1,21 @@
-# name:string ='logiciel comptabilité'
-# price:float = 20.50
-# quantity:int = 4
-
 product_detail = {
-    "name": "chemise",
+    "article": "chemise",
     "price": 65,
     "quantity": 52,
 }
 
-# name = product_detail.get("name")
+print(f'Informations du produit ====> Nom : {product_detail.get("article")}, prix : {product_detail.get("price")}€, Quantité : {product_detail.get("quantity")}, "voulez-vous en achetez ?", "O/N"')
 
-# ask_buy = "Voulez-vous achetez une ", name
-# print(product_detail)
-# print(ask_buy)
+user_choice = input()
 
-print(f'Informations du produit ====> Nom : {product_detail.get("name")}, prix : {product_detail.get("price")}€, Quantité : {product_detail.get("quantity")}')
-
-
-
-# if O == "O":
-#     print("Combien voulez-vous en acheter ?")
+if user_choice == "O":
+    print("Combien voulez-vous en acheter ?")
+    number_order = int(input())
+    if number_order <= product_detail["quantity"]:
+        product_detail["quantity"] -= number_order
+        print(f"Quantité restante : {product_detail["quantity"]}")
+    else:
+        print("Désolé nous n'avons pas assez de stock !")  
+else:
+    print("Dommage ! Peut-être une autre fois !")
 
