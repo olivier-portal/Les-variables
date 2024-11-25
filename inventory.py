@@ -3,9 +3,21 @@
 # quantity:int = 4
 
 product_detail = {
-    "name": "Samsung galaxy",
-    "price": 650,
+    "name": "chemise",
+    "price": 65,
     "quantity": 52,
 }
 
-print(product_detail)
+# name = product_detail.get("name")
+
+# ask_buy = "Voulez-vous achetez une ", name
+# print(product_detail)
+# print(ask_buy)
+
+print(f'Informations du produit ====> Nom : {product_detail.get("name")}, prix : {product_detail.get("price")}€, Quantité : {product_detail.get("quantity")}')
+
+
+
+# if O == "O":
+#     print("Combien voulez-vous en acheter ?")
+
